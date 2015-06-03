@@ -3,29 +3,72 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	  <script src="https://www.yirendai.com/static/js/jquery-1.8.2.min.js"></script>
 
 </head>
 <body style="width: 400px; background:red; ">
 
-	<h2><a href="http://www.yirendai.com/"  target="_blank">计算器</a></h2>
+	<h2><a href="http://www.yirendai.com/"  target="_blank">宜人贷借款计算器</a></h2>
 	
 	<div>
-		<input type="text" value="1" id="val1">
-		<input type="text" value="2" id="val2">
+		<input type="text" value="10000" id="amount">
+        <select name="" id="period">
+            <option value="12" selected="selected">12期</option>
+            <option value="24">24期</option>
+            <option value="36">36期</option>
+            <option value="48">48期</option>
+        </select>
 
 	</div>
 
+	<div class="bor_calculators_result" style="margin-top:20px; display:none">
+		<div class="table-warp">
+			<div class="box">
 
-	<input type="button" value="click" id="btn1">
+                 <table border="2" cellspacing="2" cellpadding="2">
+                    <thead>
+                    <tr>
+                        <td>信用资质</td>
+                        <td>前期服务费</td>
+                        <td>月分期服务费</td>
+                        <td>月还款额</td>
+                        <td>总还款额</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="row">
+                        <td><span class="well">良好</span></td>
+
+                        <td><span class="minPreFee"></span> <span class="unit">元</span> </td>
+                        <td><span class="num">0</span> <span class="unit">元</span></td>
+                        <td><span class="min_month_pay_total"></span> <span class="unit">元</span></td>
+
+                        <td><span class="num"><span class="pay_mintotal"></span></span> <span class="unit">元</span></td>
+                    </tr>
+                    <tr class="row">
+                        <td class="border-none"><span class="general">一般</span></td>
+                        <td class="border-none"><span class="maxPreFee"></span> <span class="unit">元</span></td>
+                        <td class="border-none"><span class="pro_rata_fare"></span> <span class="unit">元</span></td>
+                        <td class="border-none"><span class="max_month_pay_total"></span> <span class="unit">元</span></td>
+
+                        <td class="border-none"><span class="pay_maxtotal"></span> <span class="unit">元</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+		</div>
+	</div>
 
 
+	<input type="button" value="click" id="btn1" style="margin-top:20px; ">
 
 
-	<script type="text/javascript" src="yrd.js"></script>
 	
 
-
+	<script type="text/javascript" src="https://www.yirendai.com/static/js/user/calculator.js"></script>
+	<script type="text/javascript" src="yrd.js"></script>
+	
 
 </body>
 </html>
